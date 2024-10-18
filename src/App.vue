@@ -33,6 +33,9 @@ import { invoke } from "@tauri-apps/api/core";
   filter: drop-shadow(0 0 2em #249b73);
 }
 
+.logo.unocss:hover {
+  filter: drop-shadow(0 0 2em #7d8f9b);
+}
 </style>
 <style>
 :root {
