@@ -29,6 +29,10 @@ import { invoke } from "@tauri-apps/api/core";
   filter: drop-shadow(0 0 2em #747bff);
 }
 
+.logo.tauri:hover {
+  filter: drop-shadow(0 0 2em #24c8db);
+}
+
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #249b73);
 }
@@ -68,10 +72,6 @@ import { invoke } from "@tauri-apps/api/core";
   padding: 1.5em;
   will-change: filter;
   transition: 0.75s;
-}
-
-.logo.tauri:hover {
-  filter: drop-shadow(0 0 2em #24c8db);
 }
 
 a {
