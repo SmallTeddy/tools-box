@@ -20,7 +20,7 @@ import { invoke } from "@tauri-apps/api/core";
         <img src="/unocss.svg" class="logo unocss" alt="UnoCss logo" />
       </a>
     </div>
-    <p>Click on the Tauri, Vite, and Vue logos to learn more.</p>
+    <p>Click on the Tauri, Vite Vue, and UnoCss logos to learn more.</p>
   </main>
 </template>
 
