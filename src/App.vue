@@ -1,11 +1,12 @@
 <script setup lang="ts">
 // import { invoke } from "@tauri-apps/api/core";
 const logoLinks = reactive([
-  { name: "vite", href: "https://vitejs.dev", src: "/vite.svg" },
   { name: "tauri", href: "https://tauri.app", src: "/tauri.svg" },
+  { name: "vite", href: "https://vitejs.dev", src: "/vite.svg" },
   { name: "vue", href: "https://vuejs.org/", src: "/vue.svg" },
-  { name: "unocss", href: "https://s-test.belle.cn/zh-CN/", src: "/unocss.svg" },
   { name: "element-plus", href: "https://pnpm.io/", src: "/element-plus.svg" },
+  { name: "unocss", href: "https://s-test.belle.cn/zh-CN/", src: "/unocss.svg" },
+  { name: "typescript", href: "https://www.typescriptlang.org/", src: "/typescript.svg" },
 ]);
 </script>
 
@@ -23,29 +24,36 @@ const logoLinks = reactive([
         <img :src="link.src" :class="['logo', link.name]" :alt="link.name" />
       </el-link>
     </div>
-    <p>Click on the Tauri, Vite Vue UnoCss, and Element Plus logos to learn more.</p>
+    <p  font-size="2xl">
+      Click on the Tauri, Vite Vue Element Plus UnoCss, and TypeScript logos to learn
+      more.
+    </p>
   </main>
 </template>
 
 <style scoped>
-.logo.vite:hover {
-  filter: drop-shadow(0 0 2em #747bff);
-}
-
 .logo.tauri:hover {
   filter: drop-shadow(0 0 2em #24c8db);
+}
+
+.logo.vite:hover {
+  filter: drop-shadow(0 0 2em #747bff);
 }
 
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #249b73);
 }
 
+.logo.element-plus:hover {
+  filter: drop-shadow(0 0 2em #409eff);
+}
+
 .logo.unocss:hover {
   filter: drop-shadow(0 0 2em #7d8f9b);
 }
 
-.logo.element-plus:hover {
-  filter: drop-shadow(0 0 2em #409eff);
+.logo.typescript:hover {
+  filter: drop-shadow(0 0 2em #007acc);
 }
 </style>
 <style>
