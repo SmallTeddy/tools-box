@@ -30,6 +30,22 @@ const router = createRouter({
               component: () => import('@/views/JSON/JsonCompress.vue')
             }
           ]
+        },
+        {
+          path: 'url',
+          name: 'url',
+          children: [
+            {
+              path: 'url-decode',
+              name: 'url-decode',
+              component: () => import('@/views/Url/UrlDecode.vue')
+            },
+            {
+              path: 'url-encode',
+              name: 'url-encode',
+              component: () => import('@/views/Url/UrlEncode.vue')
+            }
+          ]
         }
       ]
     }

@@ -1,10 +1,10 @@
 @font-face {
     font-family: "iconfont";
     /* Project id 4718010 */
-    src: url('//at.alicdn.com/t/c/font_4718010_dxyserhhnze.woff2?t=1729495258611') format('woff2'),
-        url('//at.alicdn.com/t/c/font_4718010_dxyserhhnze.woff?t=1729495258611') format('woff'),
-        url('//at.alicdn.com/t/c/font_4718010_dxyserhhnze.ttf?t=1729495258611') format('truetype'),
-        url('//at.alicdn.com/t/c/font_4718010_dxyserhhnze.svg?t=1729495258611#iconfont') format('svg');
+    src: url('//at.alicdn.com/t/c/font_4718010_jds6srl7kkp.woff2?t=1729502884977') format('woff2'),
+        url('//at.alicdn.com/t/c/font_4718010_jds6srl7kkp.woff?t=1729502884977') format('woff'),
+        url('//at.alicdn.com/t/c/font_4718010_jds6srl7kkp.ttf?t=1729502884977') format('truetype'),
+        url('//at.alicdn.com/t/c/font_4718010_jds6srl7kkp.svg?t=1729502884977#iconfont') format('svg');
 }
 
 .iconfont {
@@ -15,9 +15,14 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-url:before {
+    content: "\e616";
+}
+
 .icon-json:before {
     content: "\e685";
 }
+
 
 
 html,
