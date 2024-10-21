@@ -1,5 +1,12 @@
 <script setup lang="ts">
-import { invoke } from "@tauri-apps/api/core";
+// import { invoke } from "@tauri-apps/api/core";
+const logoLinks = reactive([
+  { name: "vite", href: "https://vitejs.dev", src: "/vite.svg" },
+  { name: "tauri", href: "https://tauri.app", src: "/tauri.svg" },
+  { name: "vue", href: "https://vuejs.org/", src: "/vue.svg" },
+  { name: "unocss", href: "https://s-test.belle.cn/zh-CN/", src: "/unocss.svg" },
+  { name: "element-plus", href: "https://pnpm.io/", src: "/element-plus.svg" },
+]);
 </script>
 
 <template>
@@ -7,20 +14,16 @@ import { invoke } from "@tauri-apps/api/core";
     <h1 font-size="5xl">Welcome to Tauri + Vue</h1>
 
     <div flex-center gap-4>
-      <a href="https://vitejs.dev" target="_blank">
-        <img src="/vite.svg" class="logo vite" alt="Vite logo" />
-      </a>
-      <a href="https://tauri.app" target="_blank">
-        <img src="/tauri.svg" class="logo tauri" alt="Tauri logo" />
-      </a>
-      <a href="https://vuejs.org/" target="_blank">
-        <img src="/vue.svg" class="logo vue" alt="Vue logo" />
-      </a>
-      <a href="https://unocss.dev/" target="_blank">
-        <img src="/unocss.svg" class="logo unocss" alt="UnoCss logo" />
-      </a>
+      <el-link
+        v-for="link in logoLinks"
+        :href="link.href"
+        :underline="false"
+        target="_blank"
+      >
+        <img :src="link.src" :class="['logo', link.name]" :alt="link.name" />
+      </el-link>
     </div>
-    <p>Click on the Tauri, Vite Vue, and UnoCss logos to learn more.</p>
+    <p>Click on the Tauri, Vite Vue UnoCss, and Element Plus logos to learn more.</p>
   </main>
 </template>
 
@@ -39,6 +42,10 @@ import { invoke } from "@tauri-apps/api/core";
 
 .logo.unocss:hover {
   filter: drop-shadow(0 0 2em #7d8f9b);
+}
+
+.logo.element-plus:hover {
+  filter: drop-shadow(0 0 2em #409eff);
 }
 </style>
 <style>
@@ -138,5 +145,4 @@ button {
     background-color: #0f0f0f69;
   }
 }
-
 </style>
