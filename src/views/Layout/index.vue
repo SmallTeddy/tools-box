@@ -12,7 +12,7 @@ const handleClose = (key: string, keyPath: string[]) => {
     <el-container>
       <el-aside style="width: 240px; height: 100%">
         <el-menu
-          default-active="/json/json-format"
+          default-active="/code/code-highlight"
           router
           style="
             height: 100vh;
@@ -23,32 +23,15 @@ const handleClose = (key: string, keyPath: string[]) => {
           @open="handleOpen"
           @close="handleClose"
         >
-          <el-sub-menu index="/json">
+          <el-sub-menu index="/code">
             <template #title>
               <div class="menu-item" style="color: #f9f9f9">
-                <i class="iconfont icon-json"></i>
-                <span ml-2>JSON</span>
+                <i class="iconfont icon-code"></i>
+                <span ml-2>代码</span>
               </div>
             </template>
-            <el-menu-item index="/json/json-format">
-              <span>JSON 美化</span>
-            </el-menu-item>
-            <el-menu-item index="/json/json-compress">
-              <span>JSON 压缩</span>
-            </el-menu-item>
-          </el-sub-menu>
-          <el-sub-menu index="/url">
-            <template #title>
-              <div class="menu-item" style="color: #f9f9f9">
-                <i class="iconfont icon-url"></i>
-                <span ml-2>URL</span>
-              </div>
-            </template>
-            <el-menu-item index="/url/url-encode">
-              <span>URL 编码</span>
-            </el-menu-item>
-            <el-menu-item index="/url/url-decode">
-              <span>URL 解码</span>
+            <el-menu-item index="/code/code-highlight">
+              <span>Prismjs 代码高亮</span>
             </el-menu-item>
           </el-sub-menu>
         </el-menu>

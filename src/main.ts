@@ -9,6 +9,7 @@ import ElementPlus from 'element-plus'
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
 import './styles/base.css'
+import './styles/iconfont.css'
 import 'element-plus/dist/index.css'
 
 const app = createApp(App)
