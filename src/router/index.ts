@@ -19,9 +19,14 @@ const router = createRouter({
           name: 'code',
           children: [
             {
-              path: 'code-highlight',
-              name: 'code-highlight',
+              path: 'prismjs-code-highlight',
+              name: 'prismjs-code-highlight',
               component: () => import('@/views/Code/PrismJs/index.vue')
+            },
+            {
+              path: 'shiki-code-highlight',
+              name: 'shiki-code-highlight',
+              component: () => import('@/views/Code/Shiki/index.vue')
             }
           ]
         },

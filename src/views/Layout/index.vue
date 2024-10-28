@@ -12,7 +12,7 @@ const handleClose = (key: string, keyPath: string[]) => {
     <el-container>
       <el-aside style="width: 240px; height: 100%">
         <el-menu
-          default-active="/code/code-highlight"
+          default-active="/code/prismjs-code-highlight"
           router
           style="
             height: 100vh;
@@ -30,8 +30,11 @@ const handleClose = (key: string, keyPath: string[]) => {
                 <span ml-2>代码</span>
               </div>
             </template>
-            <el-menu-item index="/code/code-highlight">
+            <el-menu-item index="/code/prismjs-code-highlight">
               <span>Prismjs 代码高亮</span>
+            </el-menu-item>
+            <el-menu-item index="/code/shiki-code-highlight">
+              <span>Shiki 代码高亮</span>
             </el-menu-item>
           </el-sub-menu>
         </el-menu>
