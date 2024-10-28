@@ -3,6 +3,7 @@ import vue from "@vitejs/plugin-vue";
 import AutoImport from 'unplugin-auto-import/vite'
 import UnoCSS from 'unocss/vite'
 import path from 'path'
+import { prismjsPlugin } from 'vite-plugin-prismjs'
 
 const host = process.env.TAURI_DEV_HOST;
 
@@ -48,8 +49,15 @@ export default defineConfig(async () => ({
             'createI18n'
           ]
         }
-      ]
+      ],
+      dts: true
     }),
+    prismjsPlugin({
+      languages: 'all', // 语言
+      plugins: ['line-numbers', 'copy-to-clipboard'], // 插件
+      theme: 'okaidia', // 主题
+      css: true
+    })
   ],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`

@@ -1,3 +1,11 @@
+<script setup lang="ts">
+import CodePreview from '../Components/CodePreview.vue';
+
+const code = `let a = 1`;
+</script>
+
 <template>
-  <div>批量删除JSON 数据中的空格、换行符等不必要的字符来减小其体积</div>
+  <div>
+    <CodePreview :code="code" type="js" isShowlineNumbers />
+  </div>
 </template>
