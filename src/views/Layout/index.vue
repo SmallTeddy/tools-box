@@ -37,6 +37,17 @@ const handleClose = (key: string, keyPath: string[]) => {
               <span>Shiki 代码高亮</span>
             </el-menu-item>
           </el-sub-menu>
+          <el-sub-menu index="/editor">
+            <template #title>
+              <div class="menu-item" style="color: #f9f9f9">
+                <i class="iconfont icon-code"></i>
+                <span ml-2>编辑器</span>
+              </div>
+            </template>
+            <el-menu-item index="/editor/wang-editor">
+              <span>WangEditor 编辑器</span>
+            </el-menu-item>
+          </el-sub-menu>
         </el-menu>
       </el-aside>
       <el-main>

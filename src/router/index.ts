@@ -11,7 +11,7 @@ const router = createRouter({
       component: () => import('@/views/Layout/index.vue'),
       children: [
         {
-          path: '/',
+          path: 'home',
           component: () => import('@/views/Home/index.vue'),
         },
         {
@@ -30,6 +30,17 @@ const router = createRouter({
             }
           ]
         },
+        {
+          path: 'editor',
+          name: 'editor',
+          children: [
+            {
+              path: 'wang-editor',
+              name: 'wang-editor',
+              component: () => import('@/views/Editor/WangEditor/index.vue')
+            }
+          ]
+        }
       ]
     }
   ]
